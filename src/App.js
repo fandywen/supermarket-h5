@@ -4,7 +4,7 @@
  * @Author: yuwen.liu
  * @Date: 2019-04-12 16:40:16
  * @LastEditors: yuwen.liu
- * @LastEditTime: 2019-08-16 14:11:43
+ * @LastEditTime: 2019-08-18 20:36:48
  */
 import React, {Component} from 'react'
 import RouterMap from './router'
@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <RouterMap ref="RouterMap" />
+        <RouterMap />
       </Provider>
     )
   }

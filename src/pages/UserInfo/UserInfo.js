@@ -4,7 +4,7 @@
  * @Author: yuwen.liu
  * @Date: 2019-08-15 20:29:41
  * @LastEditors: yuwen.liu
- * @LastEditTime: 2019-08-17 20:02:10
+ * @LastEditTime: 2019-08-18 20:21:44
  */
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
@@ -25,9 +25,9 @@ class UserInfo extends Component {
           ? '请求信息中......'
           : errorMsg || (
             <div className="fc-r">
-              <p>商品信息：</p>
+              <p>用户信息：</p>
               <p>
-                  商品名：
+                 用户名：
                 {userInfo.resChannelStoreProductVO
                   ? userInfo.resChannelStoreProductVO.productName
                   : ''}
@@ -40,7 +40,7 @@ class UserInfo extends Component {
               </p>
             </div>
           )}
-        <button onClick={() => getICanExchangeGoods()}>请求商品基本信息</button>
+        <button onClick={() => getICanExchangeGoods()}>请求用户基本信息</button>
       </div>
     )
   }

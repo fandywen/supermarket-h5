@@ -1,18 +1,37 @@
 /*
- * @Description:router
+ * @Description:RouterMap
  * @Company: yh
  * @Author: yuwen.liu
  * @Date: 2019-08-15 15:47:30
  * @LastEditors: yuwen.liu
- * @LastEditTime: 2019-08-17 16:39:42
+ * @LastEditTime: 2019-08-18 20:17:23
  */
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
-import Home from '../pages/Home/Home'
-import Page from '../pages/Page/Page'
-import UserInfo from '../pages/UserInfo/UserInfo'
-const getRouter = () => (
-  <Router>
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
+import Loadable from 'react-loadable'
+import asyncComponents from '../components/common/asyncComponents'
+
+
+const Home = Loadable({
+  loader: () => import(/*webpackChunkName: "Home"*/ '../pages/Home/Home'),
+  loading: asyncComponents
+})
+const Page = Loadable({
+  loader: () => import(/*webpackChunkName: "Page"*/'../pages/Page/Page'),
+  loading: asyncComponents
+})
+const UserInfo = Loadable({
+  loader: () => import(/*webpackChunkName: "UserInfo"*/'../pages/UserInfo/UserInfo'),
+  loading: asyncComponents
+})
+const NotFound = Loadable({
+  loader: () => import(/*webpackChunkName: "NotFound"*/'../pages/NotFound'),
+  loading: asyncComponents
+})
+
+
+const RouterMap = () => (
+  <BrowserRouter>
     <div>
       <ul>
         <li>
@@ -29,8 +48,9 @@ const getRouter = () => (
         <Route exact path="/" component={Home} />
         <Route path="/page" component={Page} />
         <Route path="/userinfo" component={UserInfo} />
+        <Route component={NotFound} />
       </Switch>
     </div>
-  </Router>
+  </BrowserRouter>
 )
-export default getRouter
+export default RouterMap

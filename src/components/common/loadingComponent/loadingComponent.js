@@ -4,7 +4,7 @@
  * @Author: yuwen.liu
  * @Date: 2019-04-12 16:40:16
  * @LastEditors: yuwen.liu
- * @LastEditTime: 2019-08-15 20:54:14
+ * @LastEditTime: 2019-08-18 20:18:27
  */
 import './loadingComponent.scss'
 import React from 'react'
