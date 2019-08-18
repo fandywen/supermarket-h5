@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/*
+ * @Description: App
+ * @Company: yh
+ * @Author: yuwen.liu
+ * @Date: 2019-04-12 16:40:16
+ * @LastEditors: yuwen.liu
+ * @LastEditTime: 2019-08-16 14:11:43
+ */
+import React, {Component} from 'react'
+import RouterMap from './router'
+import {Provider} from 'react-redux'
+// import 'babel-polyfill';
+import store from './redux/store'
+import './App.css'
+// import {initWx} from './utils/wx.js'
+class App extends Component {
+  componentDidMount() {
+    // initWx()
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <Provider store={store}>
+        <RouterMap ref="RouterMap" />
+      </Provider>
+    )
+  }
 }
 
-export default App;
+export default App

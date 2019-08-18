@@ -1,0 +1,33 @@
+.error-page {
+    height: -webkit-fill-available;
+  }
+  .img{
+    width: 400px;
+    height: 260px;
+  }
+  .link-text {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 30px;
+    word-wrap : break-word;
+    background: #f2f2f2;
+  }
+  .link {
+    width: 267px;
+    height: 70px;
+    line-height: 70px;
+    margin-top: 30px;
+    border: 1px solid #DDDDDD;
+  }
+  .msg{
+    background-image: url('https://cdn.weimob.com/saas/beauty/image/load-error-index.png')
+  }
+  .s-pic{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }

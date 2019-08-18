@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @Company: yh
+ * @Author: yuwen.liu
+ * @Date: 2019-04-12 16:40:16
+ * @LastEditors: yuwen.liu
+ * @LastEditTime: 2019-08-18 17:30:16
+ */
 'use strict';
 
 const path = require('path');
@@ -76,13 +84,14 @@ module.exports = {
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
-  appJsConfig: resolveApp('jsconfig.json'),
   yarnLockFile: resolveApp('yarn.lock'),
   testsSetup: resolveModule(resolveApp, 'src/setupTests'),
   proxySetup: resolveApp('src/setupProxy.js'),
   appNodeModules: resolveApp('node_modules'),
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
+
+  remViewPort: resolveModule(resolveApp, 'src/remViewport'),
 };
 
 
