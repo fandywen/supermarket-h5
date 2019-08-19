@@ -4,7 +4,7 @@
  * @Author: yuwen.liu
  * @Date: 2019-04-12 16:40:16
  * @LastEditors: yuwen.liu
- * @LastEditTime: 2019-08-18 18:31:01
+ * @LastEditTime: 2019-08-19 10:45:43
  */
 import fetchTimeout from '../../utils/fetchTimeout'
 
@@ -56,7 +56,6 @@ class RequestActions {
 
       return null
     }
-
     let types = {
       REQUEST: `${option.type}_REQUEST`,
       SUCCESS: `${option.type}_SUCCESS`,

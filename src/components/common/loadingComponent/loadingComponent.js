@@ -4,11 +4,12 @@
  * @Author: yuwen.liu
  * @Date: 2019-04-12 16:40:16
  * @LastEditors: yuwen.liu
- * @LastEditTime: 2019-08-18 20:18:27
+ * @LastEditTime: 2019-08-19 10:47:00
  */
 import './loadingComponent.scss'
 import React from 'react'
 class LoadingComponent extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props)
   }
